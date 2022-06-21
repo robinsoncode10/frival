@@ -1,0 +1,749 @@
+:root { 
+--primary: #2E9AD6;
+--secundary: #edf8fd;
+--select: #71ccfd;
+--txtPrimary: #75797c;
+--white: #fff;
+--fontPrimary: 'Nunito', sans-serif;
+--fontSecondary: 'Lato', sans-serif;
+--fontLogo: 'Montserrat', sans-serif;
+--box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+* {
+    margin: 0;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body {
+    font-family: var(--fontPrimary);
+    color: var(--txtPrimary);
+    font-size: 3rem;
+}
+@media (min-width: 1023px) {
+    body {
+        font-size: 1.6rem;
+    }
+}   
+.container{
+    max-width: 100rem;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 4rem;
+    color: var(--primary);
+}
+h3{
+    font-size: 4rem;
+    color: var(--txtPrimary);
+    font-family: var(--fontSecondary);
+}
+@media (min-width: 1023px) {
+    h2{
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+    }
+    h3{
+        font-size: 1.6rem;
+    }
+}
+.animado {
+    opacity: 0;
+    transition: all 0.9s;
+}
+.mostrarArriba {
+    animation: mostrarArriba 1s;
+}
+@keyframes mostrarArriba{
+    0% {
+        transform: translateY(60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+.white {
+    color: var(--white)!important
+}
+img, picture, video, iframe {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+.btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 2rem 3rem;
+    border: none;
+    font-size: var(--txtmobile);
+    display: flex;
+    cursor: pointer;
+}
+@media (min-width: 1023px) {
+    .btn {
+        padding: 1rem 3rem;
+        font-size: var(--txtDeskt);
+    }
+}
+.topbanner {
+    padding: 1rem 0;
+    background-color: var(--primary);
+}
+.topbanner-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.topbanner-item i{
+    color: var(--white);
+    font-size: 2rem;
+}
+.topbanner-item a{
+    font-size: 2rem;
+}
+@media (min-width: 1023px) {
+    .topbanner-item i{
+        font-size: 1.6rem;
+    }
+    .topbanner-item a{
+        font-size: 1.6rem;
+    }
+}
+.hero1 {
+    background: url(../img/slider/slider01.webp);
+    background-size: cover;
+    background-position: center center;
+    height: 100rem;
+    width: 100%;
+}
+.hero1:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.owl-dots {
+    display: none;
+}
+.hero2 {
+    background: url(../img/slider/slider02.webp);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100rem;
+}
+.hero2:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+@media (min-width: 1023px) {
+    .hero1 {
+        height: 70rem;
+    }
+    .hero2 {
+        height: 70rem;
+    }
+}
+
+.title {
+    padding-top: 30rem;
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+}
+.title__txt {
+    font-family: var(--fontSecondary);
+    font-weight: 900;
+    font-size: 8rem;
+    color: var(--white);
+    margin: 0;
+}
+.caption {
+    padding-top: 5rem;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.caption__txt {
+    font-family: var(--fontSecondary);
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--primary);
+    margin: 0 auto;
+    max-width: 60rem;
+}
+.buttons {
+    padding-top: 10rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.btn__txt {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.btn__ico {
+    padding-right: 1rem;
+    font-size: var(--txtmobile);
+}
+@media (min-width: 1023px) {
+    .title {
+        padding-top: 18rem;
+    }
+    .caption {
+        padding-top: 2rem;
+    }
+    .caption__txt {
+        font-size: 3rem;
+    }
+    .buttons {
+        padding-top: 5rem;
+    }
+    .btn__ico {
+        font-size: var(--txtDeskt);
+    }
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    max-width: 100rem;
+    z-index: 2;
+}
+.logo {
+    display: grid;
+    grid-template-areas: "isotipo" "logotipo" "slogan";
+    grid-template-columns: 18rem;
+    grid-template-rows: 12rem 4rem 2rem;
+    padding: 3rem;
+    
+}
+.isotipo {
+    grid-area: isotipo;
+    align-self: center;
+    justify-self: center;
+}
+.isotipo__img{
+    width: 10rem;
+}
+.name{
+    grid-area: logotipo;
+    font-family: var(--fontLogo);
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--white);
+    align-self: center;
+    justify-self: center;
+}
+.slogan {
+    grid-area: slogan;
+    color: var(--primary);
+    font-family: var(--fontLogo);
+    font-weight: 500;
+    font-size: 2.2rem;
+    align-self: center;
+    justify-self: center;
+}
+
+@media (min-width: 1023px) {
+    .logo {
+        grid-template-rows: 6rem 1rem 2rem;
+        padding: 2rem 0;
+    }
+    .isotipo__img{
+        width: 5rem;
+    }
+    .name{
+        font-size: 2rem;
+    }
+    .slogan{
+        font-size: 1.2rem;
+    }
+}
+#btn_menu{
+    display: block;
+    margin: 5rem;
+}
+#btn_menu i {
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 8rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+#back_menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.nav {
+    z-index: 3;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    right: -40rem;
+    width: 40rem;
+    height: 100vh;
+    padding: 4rem;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+}
+.item {
+    margin-top: 5rem;
+    text-decoration: none;
+    color: var(--primary);
+}
+@media (min-width: 1023px) {
+    #btn_menu{
+        display: none;
+    }
+    .nav {
+        z-index: 3;
+        background: none;
+        position: relative;
+        top: 0;
+        right: 29rem;
+        width: 40rem;
+        height: 0vh;
+        padding: 1rem;
+    }
+    .menu__list {
+        flex-direction: row;
+        padding-top: 5rem;
+    }
+    .item:first-child {
+        background-color: var(--primary);
+        color: var(--white);
+        text-decoration: none;
+        margin-right: 3rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    .item {
+        margin: 0;
+        font-size: var(--txtDeskt);
+        color: var(--white);
+        text-decoration: none;
+        margin-right: 3rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    .item:hover {
+        background-color: var(--primary);
+        transition-duration: 0.5s;
+        transition-property: color, background;
+    }
+}
+    .servicesDeskt{
+        position: absolute;
+        top: 92rem;
+        left: 10%;
+        right: 10%;
+        display: block;
+    }
+    .services{
+        margin: 1rem;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 0.5rem;
+        background-color: var(--white);
+        box-shadow: var(--box-shadow);
+        text-align: center;
+    }
+    .services i {
+        font-size: 5rem;
+        color: var(--primary);
+        padding-top: 2.5rem;
+    }
+    .servicesTitle {
+        color: var(--txtPrimary);
+        padding-top: 1rem;
+        font-size: 3rem;
+    }
+
+    @media (min-width: 1023px) {
+        .servicesDeskt{
+            position: absolute;
+            top: 65rem;
+            left: 20%;
+            right: 20%;
+            z-index: 9;
+            display: block;
+        }
+        .services{
+            margin: 1rem;
+            width: 12rem;
+            height: 12rem;
+            border-radius: 0.5rem;
+            background-color: var(--white);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+        .servicesTitle {
+            color: var(--txtPrimary);
+            padding-top: 1rem;
+            font-size: 1.3rem;
+        }
+        .services i {
+            font-size: 5rem;
+            color: var(--primary);
+            padding-top: 1.5rem;
+        }
+    }
+.aboutUs{
+    margin-top: 10rem;
+}
+.information {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem;
+}
+.informationTxt{
+    text-align: center;
+}
+@media (min-width: 1023px) {
+    .aboutUs{
+        margin-top: 10rem;
+    }
+    .information:first-child{
+        flex-direction: row-reverse;
+    }
+    .information{
+        flex-direction: row;
+    }
+    .informationImg{
+        width: 50rem;
+    }
+    .informationTxt{
+        padding-top: 10rem;
+        text-align: left;
+    }
+}
+.divider {
+    display: flex;
+    background-color: var(--primary);
+    width: 100%;
+    height: 10rem;
+    margin-top: 10rem;
+}
+.dividerTxt {
+    color: var(--white);
+    justify-self: center;
+    align-self: center;
+    margin: 0 auto;
+}
+
+@media (min-width: 1023px) {
+    .divider {
+        height: 5rem;
+    }
+    .dividerTxt{
+        padding: 1rem;
+    }
+}
+.card {
+    margin: 2rem 5rem;
+    display: flex;
+    background-color: var(--white);
+    text-align: center; 
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    height: 100%;
+    transition: transform .2s; 
+}
+
+.card:hover{
+    transform: scale(1.1); 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    z-index: 2;
+}
+.productsImg {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.productsContent{
+    width: 70%;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5 (repeat(20%));
+    grid-template-areas: "logistica" "almacenamiento" "congelamiento" "transporte" "venta";
+    row-gap: 1rem;
+    margin: 2rem 0 5rem 0;
+}
+
+.productsContainer__logistica {
+    grid-area: logistica;
+}
+.productsContainer__almacenamiento {
+    grid-area: almacenamiento;
+}
+.productsContainer__congelamiento {
+    grid-area: congelamiento;
+}
+.productsContainer__transporte {
+    grid-area: transporte;
+}
+.productsContainer__venta {
+    grid-area: venta;
+}
+
+@media (min-width: 1023px) {
+    .productsContent__v2 {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .productsImg__v2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .card:first-child{
+        flex-direction: column;
+    }
+
+    .products {
+        grid-template-columns: 50% 50%;
+    }
+    .productsContainer__logistica {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .productsContainer__almacenamiento {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .productsContainer__congelamiento {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .productsContainer__transporte {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .productsContainer__venta {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+}
+.mision {
+    background-color: var(--primary);
+}
+.misionContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.misionContent{
+    padding: 1rem;
+    flex-direction: column;
+}
+.misionTitle{
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+.misionTxt{
+    padding: 1rem;
+    color: var(--txtPrimary);
+}
+
+@media (min-width: 1023px) {
+    .misionContainer{
+        flex-direction: row;
+    }
+}
+.politics {
+    background-color: var(--secundary);
+    padding: 5rem 0;
+}
+.politicsCard {
+    padding: 5rem 0;
+    margin: 0 5rem;
+    flex-direction: column;
+}
+
+.politics h2 {
+    text-align: center;
+}
+.politics p {
+    padding: 2rem 8rem;
+}
+.brands {
+    text-align: center;
+    padding: 2rem 0;
+}
+.footer {
+    background-color: var(--primary);
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+}
+.footer__logo {
+    width: 33.3%;
+}
+
+.footer__company {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__title {
+    padding: 2rem 0;
+    color: var(--white);
+}
+.footer__social {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--white);
+    margin: 1rem 0;
+}
+.footer__line {
+        color: var(--white);
+        height: 0.3rem;
+        width: 100%;
+}
+hr {
+    background-color: var(--white);
+}
+.copyright {
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem;
+}
+.dev {
+    text-decoration: none;
+    opacity: 40%;
+}
+.buttonFloat {
+    position: fixed;
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
+    bottom: 3rem;
+    right: 3rem;
+    background-color: #25D366;
+    color: var(--white);
+    border-radius: 5rem;
+    padding: 0.2rem 0 0 0 ;
+    text-align: center;
+    font-size: 6rem;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+.buttonFloat__instagram {
+    position: fixed;
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
+    bottom: 15rem;
+    right: 3rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 5rem;
+    padding: 0.2rem 0 0 0 ;
+    text-align: center;
+    font-size: 6rem;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+@media (min-width: 1023px) {
+    .buttonFloat {
+        position: fixed;
+        width: 5.5rem;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        bottom: 3rem;
+        right: 3rem;
+        background-color: #25D366;
+        color: var(--white);
+        border-radius: 5rem;
+        padding: 0.2rem 0 0 0 ;
+        text-align: center;
+        font-size: 3rem;
+        box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.3);
+        z-index: 10;
+    }
+    .buttonFloat__instagram {
+        position: fixed;
+        width: 5.5rem;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        bottom: 11rem;
+        right: 3rem;
+        background-color: var(--primary);
+        color: var(--white);
+        border-radius: 5rem;
+        padding: 0.2rem 0 0 0 ;
+        text-align: center;
+        font-size: 3rem;
+        box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.3);
+        z-index: 10;
+    }
+    
+}
